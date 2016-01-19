@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 
 import java.util.Set;
 
+import static java.util.Collections.singleton;
+
 /**
  * Class of the values of the `type` field.
  */
@@ -33,5 +35,9 @@ public class Type {
 
     public boolean isUnion() {
         return union != null;
+    }
+
+    public Set<SimpleType> toUnion() {
+        return isUnion() ? union : singleton(simple);
     }
 }
