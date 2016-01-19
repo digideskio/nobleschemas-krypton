@@ -8,30 +8,30 @@ import java.util.Set;
  * Class of the values of the `type` field.
  */
 public class Type {
-    public SimpleType type;
-    public Set<SimpleType> types;
+    public SimpleType simple;
+    public Set<SimpleType> union;
 
     @JsonCreator
-    public Type(SimpleType type) {
-        this.type = type;
+    public Type(SimpleType simple) {
+        this.simple = simple;
     }
 
     @JsonCreator
-    public Type(Set<SimpleType> types) {
-        this.types = types;
+    public Type(Set<SimpleType> union) {
+        this.union = union;
     }
 
     public Type type(SimpleType type) {
-        this.type = type;
+        this.simple = type;
         return this;
     }
 
     public Type types(Set<SimpleType> types) {
-        this.types = types;
+        this.union = types;
         return this;
     }
 
-    public boolean isArray() {
-        return types != null;
+    public boolean isUnion() {
+        return union != null;
     }
 }
