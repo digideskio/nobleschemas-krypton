@@ -27,4 +27,8 @@ public class Items {
         this.schemas = schemas;
         return this;
     }
+
+    public boolean isArray() {
+        return schemas != null;
+    }
 }

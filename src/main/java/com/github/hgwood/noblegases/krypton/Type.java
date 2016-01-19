@@ -27,4 +27,8 @@ public class Type {
         this.types = types;
         return this;
     }
+
+    public boolean isArray() {
+        return types != null;
+    }
 }

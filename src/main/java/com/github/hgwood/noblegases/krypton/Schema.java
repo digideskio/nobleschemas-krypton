@@ -207,4 +207,8 @@ public class Schema {
         this.not = not;
         return this;
     }
+
+    public boolean isRef() {
+        return $ref != null;
+    }
 }
