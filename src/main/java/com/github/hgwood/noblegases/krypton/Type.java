@@ -5,25 +5,25 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import java.util.Set;
 
 public class Type {
-    public String type;
-    public Set<String> types;
+    public SimpleType type;
+    public Set<SimpleType> types;
 
     @JsonCreator
-    public Type(String type) {
+    public Type(SimpleType type) {
         this.type = type;
     }
 
     @JsonCreator
-    public Type(Set<String> types) {
+    public Type(Set<SimpleType> types) {
         this.types = types;
     }
 
-    public Type type(String type) {
+    public Type type(SimpleType type) {
         this.type = type;
         return this;
     }
 
-    public Type types(Set<String> types) {
+    public Type types(Set<SimpleType> types) {
         this.types = types;
         return this;
     }
