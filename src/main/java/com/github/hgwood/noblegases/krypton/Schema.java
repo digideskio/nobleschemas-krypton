@@ -43,11 +43,6 @@ public class Schema {
     public List<Schema> oneOf;
     public Schema not;
 
-    public Schema maximum(BigDecimal maximum) {
-        this.maximum = maximum;
-        return this;
-    }
-
     public Schema $ref(String $ref) {
         this.$ref = $ref;
         return this;
@@ -80,6 +75,11 @@ public class Schema {
 
     public Schema multipleOf(BigDecimal multipleOf) {
         this.multipleOf = multipleOf;
+        return this;
+    }
+
+    public Schema maximum(BigDecimal maximum) {
+        this.maximum = maximum;
         return this;
     }
 
