@@ -4,6 +4,9 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 
 import java.util.List;
 
+/**
+ * Class of the values of the `items` field.
+ */
 public class Items {
     public Schema schema;
     public List<Schema> schemas;

@@ -4,6 +4,9 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 
 import java.util.Set;
 
+/**
+ * Class of the values of the object found in the `dependencies` field.
+ */
 public class Dependency {
     public Schema schema;
     public Set<String> property;

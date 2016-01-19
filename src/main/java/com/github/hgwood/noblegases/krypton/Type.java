@@ -4,6 +4,9 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 
 import java.util.Set;
 
+/**
+ * Class of the values of the `type` field.
+ */
 public class Type {
     public SimpleType type;
     public Set<SimpleType> types;
