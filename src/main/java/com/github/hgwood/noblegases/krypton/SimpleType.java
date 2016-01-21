@@ -14,7 +14,7 @@ public enum SimpleType {
     @JsonCreator
     public static SimpleType fromJson(String jsonStringValue) {
         for (SimpleType simpleType : values()) {
-            return simpleType;
+            if (simpleType.toString().equals(jsonStringValue)) return simpleType;
         }
         throw new IllegalArgumentException("Invalid primitive type: " + jsonStringValue);
     }
