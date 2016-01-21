@@ -6,7 +6,7 @@ Krypton allows developers to work with JSON schemas using Java.
 
 ## Get Started
 
-Krypton requires Java 5 or later.
+Krypton requires Java 7 or later.
 
 ### [Get from Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.github.hgwood.nobleschemas%22%20a%3A%22krypton%22)...
 
