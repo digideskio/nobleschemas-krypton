@@ -39,10 +39,28 @@ public class Items {
     }
 
     @JsonIgnore
+    public boolean isSingleSchema() {
+        return schema != null;
+    }
+
+    @JsonIgnore
+    public boolean isTupleSchema() {
+        return schemas != null;
+    }
+
+    /**
+     * @deprecated Use {@link #isSingleSchema()} instead. Will be removed in 2.0.
+     */
+    @Deprecated
+    @JsonIgnore
     public boolean isSingle() {
         return schema != null;
     }
 
+    /**
+     * @deprecated Use {@link #isTupleSchema()} instead. Will be removed in 2.0.
+     */
+    @Deprecated
     @JsonIgnore
     public boolean isArray() {
         return schemas != null;
