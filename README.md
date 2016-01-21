@@ -49,14 +49,14 @@ if you detect any.
 
 Please note however, that there is no validation aside from basic type
 correctness. For example, Krypton does not verify that values in the `required`
-property are actually the names of properties.
+property are actually the names of properties, only that they are strings.
 
 ## Technical choices
 
-The objects defined by the spec are modeled in a simple way, i.e. without
-resorting to inheritance. Think of them as maps with typed values of different
-types (which is what they are is JSON). In accordance with this philosophy,
-all fields are public. Builder-style setters are provided for convenience.
+The objects defined by the spec are modeled in a simple way, without resorting
+to inheritance. Think of them as maps with typed values of different types
+(which is what they are in JSON). In accordance with this philosophy, all
+fields are public. Builder-style setters are provided for convenience.
 
 Furthermore, there is no coherence validation. Krypton will not complain that
 a property reserved for schemas of type `string` (e.g. `minLength`) have a
