@@ -6,7 +6,7 @@
 
   <groupId>com.github.hgwood.nobleschemas</groupId>
   <artifactId>krypton</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.1</version>
 
   <name>Krypton</name>
   <description>A very straight-forward model of JSON Schema Draft 4 instances.</description>

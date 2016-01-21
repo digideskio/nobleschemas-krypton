@@ -100,6 +100,11 @@ between the different cases.
 
 The versioning follows semantic versioning.
 
+### 1.0.1
+
+- fix: correct deserialization of `SimpleType`
+  - The deserialized value was always `ARRAY`
+
 ### 1.0.0
 
 - feat: 100% spec support (i.e. should deserialize any valid schema)
