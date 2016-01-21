@@ -54,7 +54,7 @@ public class Additionals {
     /**
      * Returns true if additional properties/items are allowed, false otherwise.
      *
-     * Additional properties/items are only disallowed if the JSON value is `false`.
+     * According to the spec, additional properties/items are only disallowed if the JSON value is `false`.
      */
     @JsonIgnore
     public boolean areAllowed() {
