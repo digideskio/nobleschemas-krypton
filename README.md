@@ -39,7 +39,7 @@ try (InputStream schemaStream = getClass().getResourceAsStream("schema.json")) {
 }
 ```
 
-Krypton requires Jackson 2.7 or later.
+Krypton requires Jackson 2.7 or later. Serialization is also supported.
 
 ## Specification Support
 
@@ -93,12 +93,15 @@ between the different cases.
 
 ## Roadmap
 
-- Correct serialization from a Krypton's `Schema` to a valid JSON schema
 - Validation
 
 ## Change log
 
 The versioning follows semantic versioning.
+
+### 1.1.0
+
+- feat: serialization support
 
 ### 1.0.1
 

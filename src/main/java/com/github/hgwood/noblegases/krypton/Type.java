@@ -1,6 +1,8 @@
 package com.github.hgwood.noblegases.krypton;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonValue;
 
 import java.util.Set;
 
@@ -23,6 +25,11 @@ public class Type {
         this.union = union;
     }
 
+    @JsonValue
+    public Object toJson() {
+        return isSimple() ? simple : union;
+    }
+
     public Type type(SimpleType type) {
         this.simple = type;
         return this;
@@ -33,6 +40,12 @@ public class Type {
         return this;
     }
 
+    @JsonIgnore
+    public boolean isSimple() {
+        return simple != null;
+    }
+
+    @JsonIgnore
     public boolean isUnion() {
         return union != null;
     }

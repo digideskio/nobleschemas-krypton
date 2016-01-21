@@ -1,6 +1,7 @@
 package com.github.hgwood.noblegases.krypton;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum SimpleType {
     ARRAY,
@@ -19,6 +20,7 @@ public enum SimpleType {
         throw new IllegalArgumentException("Invalid primitive type: " + jsonStringValue);
     }
 
+    @JsonValue
     @Override
     public String toString() {
         return name().toLowerCase();

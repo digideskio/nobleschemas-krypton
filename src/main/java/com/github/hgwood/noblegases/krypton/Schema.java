@@ -1,5 +1,7 @@
 package com.github.hgwood.noblegases.krypton;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.math.BigDecimal;
@@ -8,6 +10,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_NULL;
+
+@JsonInclude(NON_NULL)
 public class Schema {
     public String $ref;
     public String id;
@@ -208,6 +213,7 @@ public class Schema {
         return this;
     }
 
+    @JsonIgnore
     public boolean isRef() {
         return $ref != null;
     }

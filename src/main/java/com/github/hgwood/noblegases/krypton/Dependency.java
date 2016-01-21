@@ -1,6 +1,8 @@
 package com.github.hgwood.noblegases.krypton;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonValue;
 
 import java.util.Set;
 
@@ -21,6 +23,11 @@ public class Dependency {
         this.property = property;
     }
 
+    @JsonValue
+    public Object toJson() {
+        return isSchema() ? schema : property;
+    }
+
     public Dependency schemaDependency(Schema schema) {
         this.schema = schema;
         return this;
@@ -31,10 +38,12 @@ public class Dependency {
         return this;
     }
 
+    @JsonIgnore
     public boolean isSchema() {
         return schema != null;
     }
 
+    @JsonIgnore
     public boolean isProperty() {
         return property != null;
     }
