@@ -21,8 +21,17 @@ public enum SimpleType {
     }
 
     @JsonValue
+    public String toJson() {
+        return name().toLowerCase();
+    }
+
+    /**
+     * @deprecated use {@link #toJson()} instead to get the name in lower case. Will return the name in upper case
+     * starting from 2.0.
+     */
+    @Deprecated
     @Override
     public String toString() {
-        return name().toLowerCase();
+        return toJson();
     }
 }
