@@ -103,7 +103,7 @@ The versioning follows semantic versioning.
 
 - feat: serialization support
 - fix: added `patternProperties`
-- refactor: separated toJson from `toString` in `SimpleType`
+- refactor: separated `toJson` from `toString` in `SimpleType`
   - This makes things clearer. `toString` will get back its default behavior in 2.0.
 - refactor: renamed convenience methods in `Items`
   - Older names remain but are deprecated and will be removed in 2.0.
