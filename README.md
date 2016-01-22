@@ -102,6 +102,11 @@ The versioning follows semantic versioning.
 ### 1.1.0
 
 - feat: serialization support
+- fix: added `patternProperties`
+- refactor: separated toJson from `toString` in `SimpleType`
+  - This makes things clearer. `toString` will get back its default behavior in 2.0.
+- refactor: renamed convenience methods in `Items`
+  - Older names remain but are deprecated and will be removed in 2.0.
 
 ### 1.0.1
 
@@ -111,3 +116,6 @@ The versioning follows semantic versioning.
 ### 1.0.0
 
 - feat: 100% spec support (i.e. should deserialize any valid schema)
+
+> **Edit**: it was found later that the `patternProperties` field was missing
+> from the `Schema` class. It was added in 1.1.0.

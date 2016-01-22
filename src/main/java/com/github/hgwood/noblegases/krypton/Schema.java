@@ -39,6 +39,7 @@ public class Schema {
     public Additionals additionalProperties;
     public Map<String, Schema> definitions;
     public Map<String, Schema> properties;
+    public Map<String, Schema> patternProperties;
     public Map<String, Dependency> dependencies;
     @JsonProperty("enum") public Set<Object> _enum;
     public Type type;
@@ -170,6 +171,11 @@ public class Schema {
 
     public Schema properties(Map<String, Schema> properties) {
         this.properties = properties;
+        return this;
+    }
+
+    public Schema patternProperties(Map<String, Schema> patternProperties) {
+        this.patternProperties = patternProperties;
         return this;
     }
 
