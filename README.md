@@ -14,12 +14,12 @@ Krypton requires Java 7 or later.
 <dependency>
   <groupId>com.github.hgwood.nobleschemas</groupId>
   <artifactId>krypton</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
 </dependency>
 ```
 
 ```
-group: 'com.github.hgwood.nobleschemas', name: 'krypton', version: '1.0.0'
+group: 'com.github.hgwood.nobleschemas', name: 'krypton', version: '1.1.0'
 ```
 
 ### ...or build from sources
